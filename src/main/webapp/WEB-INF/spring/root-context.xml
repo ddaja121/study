@@ -21,9 +21,9 @@
         <property name="password" value="ㅇ"/>
     </bean>  --> 
 
-	<!-- JDNI Setting -->
+	<!-- JDNI Setting  :  java:comp/env/ + Resource name -->
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-	    <property name="jndiName" value="java:comp/env/jndi/board" />
+	  <property name="jndiName" value="java:comp/env/jndi/study"></property>
 	</bean>
    
     <!-- Mybatis 연동 -->
