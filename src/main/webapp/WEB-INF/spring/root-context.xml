@@ -23,7 +23,7 @@
 
 	<!-- JDNI Setting  :  java:comp/env/ + Resource name -->
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-	  <property name="jndiName" value="java:comp/env/jndi/study"></property>
+	  <property name="jndiName" value="java:comp/env/jndi/oracle_board"></property>
 	</bean>
    
     <!-- Mybatis 연동 -->
