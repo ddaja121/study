@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "mvn clean package"
+                sh "export PATH=$PATH:$HOME/bin:/var/jenkins_home/apache-maven-3.9.6/bin; mvn clean package"
             }
         }
 
