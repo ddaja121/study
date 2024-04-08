@@ -1,5 +1,7 @@
 pipeline {
     agent { label 'slave01' }
+
+    tools { maven 'Maven3.9.6'}
     
     stages {
         
@@ -11,7 +13,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "export PATH=$PATH:$HOME/bin:/var/jenkins_home/apache-maven-3.9.6/bin"
                 sh "mvn clean package"
             }
         }
