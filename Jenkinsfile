@@ -43,8 +43,7 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: '/app/tomcat/tomcat9/',
-                                    remoteDirectorySDF: false,
+                                    remoteDirectory: '',
                                     removePrefix: 'build/libs',
                                     sourceFiles: 'build/libs/*.jar'
                                 )
