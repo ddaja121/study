@@ -37,8 +37,8 @@ pipeline {
                                 sshTransfer(
                                     cleanRemote: false,
                                     excludes: '',
-                                    execCommand: 'ls -l'
-                                    execTimeout: 120000,
+                                    execCommand: 'ls -l',
+                                    execTimeout: 120000, // 쉼표 추가
                                     flatten: false,
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
@@ -55,6 +55,8 @@ pipeline {
                         )
                     ]
                 )
+            }
+        }
             
    		// stage...
    	}
