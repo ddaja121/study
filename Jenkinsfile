@@ -49,9 +49,6 @@ pipeline {
                                     sourceFiles: 'build/libs/*.jar'
                                 )
                             ],
-                            usePromotionTimestamp: false,
-                            useWorkspaceInPromotion: false,
-                            verbose: true
                         )
                     ]
                 )
