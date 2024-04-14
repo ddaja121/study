@@ -37,13 +37,13 @@ pipeline {
                                 sshTransfer(
                                     cleanRemote: false,
                                     excludes: '',
-                                    execCommand: 'ls -l',
+                                    execCommand: './startup.sh',
                                     execTimeout: 120000, // 쉼표 추가
                                     flatten: false,
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: '',
+                                    remoteDirectory: '/app/tomcat/tomcat9/bin',
                                     removePrefix: 'build/libs',
                                     sourceFiles: 'build/libs/*.jar'
                                 )
