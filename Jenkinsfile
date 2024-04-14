@@ -49,6 +49,7 @@ pipeline {
                                     sourceFiles: 'build/libs/*.jar'
                                 )
                             ],
+                            verbose: true
                         )
                     ]
                 )
