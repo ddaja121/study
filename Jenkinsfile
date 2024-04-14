@@ -32,7 +32,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         sshPublisherDesc(
-                            configName: '_web_prod', // 위에서 만든 SSH 의 Name 을 적을것
+                            configName: '46_study_board', // 위에서 만든 SSH 의 Name 을 적을것
                             transfers: [
                                 sshTransfer(
                                     cleanRemote: false,
@@ -46,17 +46,18 @@ pipeline {
                                     remoteDirectory: '/app/tomcat/tomcat9/',
                                     remoteDirectorySDF: false,
                                     removePrefix: 'build/libs',
-                                    sourceFiles: 'build/libs/*.jar')],
-                                    usePromotionTimestamp: false,
-                                    useWorkspaceInPromotion: false,
-                                    verbose: true
+                                    sourceFiles: 'build/libs/*.jar'
                                 )
-                            ]
+                            ],
+                            usePromotionTimestamp: false,
+                            useWorkspaceInPromotion: false,
+                            verbose: true
                         )
                     ]
                 )
             }
         }
+
             
    		// stage...
    	}
