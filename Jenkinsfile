@@ -26,6 +26,35 @@ pipeline {
             }
         }
 
+        // Pulish over SSH
+        stage('Deploy') {
+            steps {
+                sshPublisher(
+                    publishers: [
+                        sshPublisherDesc(
+                            configName: '_web_prod', // 위에서 만든 SSH 의 Name 을 적을것
+                            transfers: [
+                                sshTransfer(
+                                    cleanRemote: false,
+                                    excludes: '',
+                                    execCommand: 'ls -l'
+                                    execTimeout: 120000,
+                                    flatten: false,
+                                    makeEmptyDirs: false,
+                                    noDefaultExcludes: false,
+                                    patternSeparator: '[, ]+',
+                                    remoteDirectory: '/app/tomcat/tomcat9/',
+                                    remoteDirectorySDF: false,
+                                    removePrefix: 'build/libs',
+                                    sourceFiles: 'build/libs/*.jar')],
+                                    usePromotionTimestamp: false,
+                                    useWorkspaceInPromotion: false,
+                                    verbose: true
+                                )
+                            ]
+                        )
+                    ]
+                )
             
    		// stage...
    	}
