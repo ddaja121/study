@@ -22,9 +22,10 @@
     </bean>  --> 
 
 	<!-- JDNI Setting  :  java:comp/env/+Resource name -->
-	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-	  <property name="jndiName" value="java:comp/env/jndi/oracle_board"></property>
-	</bean>
+    	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+                <property name="jndiName" value="java:jboss/oracleDS" />
+        </bean>
+
    
     <!-- Mybatis 연동 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
