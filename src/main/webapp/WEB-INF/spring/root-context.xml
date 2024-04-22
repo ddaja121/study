@@ -23,7 +23,7 @@
 
 	<!-- JDNI Setting  :  java:comp/env/+Resource name -->
     	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-                <property name="jndiName" value="java:jboss/oracleDS" />
+                <property name="jndiName" value="java:comp/env/jdbc/oracleDS" />
         </bean>
 
    
