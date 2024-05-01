@@ -46,7 +46,8 @@ pipeline {
                                     patternSeparator: '[, ]+',
                                     remoteDirectory: '',
                                     removePrefix: 'build/libs',
-                                    sourceFiles: '/home/jenkins/workspace/study/target/study-1.0.0-BUILD-SNAPSHOT.war'
+                                    sourceFiles: 'target/*.war'
+                                    verbose: true
                                 )
                             ],
                             verbose: true
