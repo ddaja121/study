@@ -38,7 +38,7 @@ pipeline {
                                 sshTransfer(
                                     cleanRemote: false,
                                     excludes: '',
-                                    execCommand: '/app/tomcat/tomcat9/bin/shutdown.sh; /app/tomcat/tomcat9/bin/startup.sh',
+                                    execCommand: '/home/tomcat/jenkins/was_restart.sh',
                                     execTimeout: 120000, // 쉼표 추가
                                     flatten: false,
                                     makeEmptyDirs: false,
