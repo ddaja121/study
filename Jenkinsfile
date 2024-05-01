@@ -47,7 +47,6 @@ pipeline {
                                     remoteDirectory: '',
                                     removePrefix: 'build/libs',
                                     sourceFiles: 'target/*.war'
-                                    verbose: true
                                 )
                             ],
                             verbose: true
