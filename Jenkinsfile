@@ -26,11 +26,6 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                sh "mvn clean package"
-            }
-        }
         
         // Pulish over SSH
         stage('Deploy') {
