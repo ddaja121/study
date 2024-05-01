@@ -26,6 +26,12 @@ pipeline {
             }
         }
 
+        stage('Build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        
         // Pulish over SSH
         stage('Deploy') {
             steps {
@@ -37,15 +43,15 @@ pipeline {
                                 sshTransfer(
                                     cleanRemote: false,
                                     excludes: '',
-                                    execCommand: '/app/tomcat/tomcat9/bin/startup.sh',
+                                    execCommand: '/app/tomcat/tomcat9/bin/shutdown.sh; /app/tomcat/tomcat9/bin/startup.sh',
                                     execTimeout: 120000, // 쉼표 추가
                                     flatten: false,
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: '/source',
+                                    remoteDirectory: '',
                                     removePrefix: 'build/libs',
-                                    sourceFiles: '/home/jenkins/workspace/*/target/*.war'
+                                    sourceFiles: '/home/jenkins/workspace/study/target/study-1.0.0-BUILD-SNAPSHOT.war'
                                 )
                             ],
                             verbose: true
