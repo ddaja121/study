@@ -45,7 +45,7 @@ pipeline {
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
                                     remoteDirectory: '',
-                                    removePrefix: 'build/libs',
+                                    removePrefix: 'target',
                                     sourceFiles: 'target/*.war'
                                 )
                             ],
