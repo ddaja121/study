@@ -43,7 +43,7 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: '',
+                                    remoteDirectory: '/source',
                                     removePrefix: 'build/libs',
                                     sourceFiles: 'build/libs/*.jar'
                                 )
