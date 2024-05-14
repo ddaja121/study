@@ -1,6 +1,7 @@
 pipeline {
     agent { label 'slave01' }
 
+    //ss
     tools { 
         maven 'Maven3.9.6'
         jdk "JDK1.8"
