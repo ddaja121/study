@@ -255,15 +255,11 @@
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
             </plugin>
-	  <pluginManagement>
-	    <plugins>
 	      <plugin>
 	        <groupId>org.codehaus.sonar</groupId>
 	        <artifactId>sonar-maven-plugin</artifactId>
 	        <version>2.5</version>
 	      </plugin>
-	    </plugins>
-	  </pluginManagement>	
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
