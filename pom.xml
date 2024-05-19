@@ -255,6 +255,11 @@
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
             </plugin>
+	     <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version> <!-- 호환 가능한 버전으로 변경 -->
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
